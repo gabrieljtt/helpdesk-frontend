@@ -28,6 +28,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 
 import { ToastrModule } from 'ngx-toastr';
+import { NgxMaskModule } from 'ngx-mask';
 
 //Componentes do Projeto
 import { NavComponent } from './components/nav/nav.component';
@@ -77,7 +78,8 @@ import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecn
       timeOut: 4000,
       closeButton: true,
       progressBar: true
-     })
+     }),
+     NgxMaskModule.forRoot()
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]

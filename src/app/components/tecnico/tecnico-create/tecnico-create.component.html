@@ -5,36 +5,59 @@
         <img class="fullWidth" src="assets/img/tecnico-create.svg" alt="Imagem tecnico-create">
 
         <section class="section">
-            <mat-checkbox class="margin">Admin</mat-checkbox>
-            <mat-checkbox class="margin">Cliente</mat-checkbox>
-            <mat-checkbox class="margin">Técnico</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(0)" class="margin" color="primary">Admin</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(1)" class="margin" color="primary">Cliente</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(2)" class="margin" color="primary">Técnico</mat-checkbox>
         </section>
 
         <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Nome</mat-label>
-            <input matInput placeholder="Ex. Fulano">
+            <input [formControl] = "nome"
+            required
+            [(ngModel)] = "tecnico.nome"
+            name = "nome"
+            matInput
+            maxlength="50"
+            placeholder="Ex. Fulano">
             <mat-icon matSuffix>face</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>CPF</mat-label>
-            <input matInput placeholder="Ex. 000.000.000.00">
+            <input [formControl] = "cpf" 
+            required 
+            [(ngModel)] = "tecnico.cpf"
+            name = "cpf"
+            matInput
+            mask="000.000.000-00"
+            placeholder="Ex. 000.000.000-00">
             <mat-icon matSuffix>pin</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>E-mail</mat-label>
-            <input matInput placeholder="Ex. fulano@email.com">
+            <input [formControl] = "email" 
+            required 
+            [(ngModel)] = "tecnico.email"
+            name = "email"
+            matInput 
+            placeholder="Ex. fulano@email.com">
             <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Senha</mat-label>
-            <input type="password" matInput placeholder="Ex. 123">
+            <input [formControl] = "senha" 
+            required 
+            [(ngModel)] = "tecnico.senha"
+            name = "senha"
+            type="password" 
+            matInput 
+            placeholder="Ex. 123">
             <mat-icon matSuffix>lock</mat-icon>
         </mat-form-field>
 
-        <button class="fullWidth mat-elevation-z4" mat-raised-button color="primary">Cadastrar</button>
-        <button class="fullWidth mat-elevation-z4" mat-raised-button color="warn">Cancelar</button>
+        <button (click)="create()" [disabled]="!validaCampos()" class="fullWidth mat-elevation-z4" mat-raised-button color="primary">Cadastrar</button>
+        <button routerLink="../" class="fullWidth mat-elevation-z4" mat-raised-button color="warn">Cancelar</button>
     </form>
 </div>
