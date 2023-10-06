@@ -39,7 +39,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
-import { TecnicoDeleteComponent } from './components/tenico/tecnico-delete/tecnico-delete.component';
+import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
 
 
 @NgModule({
@@ -52,7 +52,7 @@ import { TecnicoDeleteComponent } from './components/tenico/tecnico-delete/tecni
     LoginComponent,
     TecnicoCreateComponent,
     TecnicoUpdateComponent,
-    TecnicoDeleteComponent
+    TecnicoDeleteComponent,
   ],
   imports: [
     BrowserModule,
