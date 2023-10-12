@@ -14,4 +14,8 @@ constructor(private http: HttpClient) { }
   findAll(): Observable <Chamado[]> {
     return this.http.get<Chamado[]>(`${API_CONFIG.baseUrl}/chamados`);
   }
+
+  create(chamado: Chamado): Observable <Chamado> {
+    return this.http.post<Chamado>(`${API_CONFIG.baseUrl}/chamados/`, chamado);
+  }
 }
