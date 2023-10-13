@@ -1,6 +1,6 @@
-# Helpdesk
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
+# Helpdesk-frontend
+Front-End de um sistema de gerenciamento de chamados simulando um simples HelpDesk, desenvolvido em Angular 12.
+O projeto foi desenvolvido com o auxílio do curso - "Formação Angular + SpringBoot", presente na Udemy.
 
 ## Development server
 
