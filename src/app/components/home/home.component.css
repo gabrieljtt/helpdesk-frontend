@@ -7,3 +7,8 @@
 img{
     height: 15rem;
 }
+
+.rodape {
+    opacity: .6;
+    text-align: center;
+}

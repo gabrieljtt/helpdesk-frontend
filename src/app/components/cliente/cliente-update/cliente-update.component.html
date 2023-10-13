@@ -1,8 +1,8 @@
 <div class="container mat-elevation-z8">
     <form class="form">
 
-        <h1 class="fullWidth">Alterar Cliente</h1>
-        <img class="fullWidth" src="assets/img/tecnico-create.svg" alt="Imagem cliente-edit">
+        <h1 class="fullWidth">Alteração de Cliente</h1>
+        <img class="fullWidth" src="assets/img/tecnico-create.svg" alt="Imagem cliente-update">
 
         <section class="section">
             <mat-checkbox (click)="addPerfil(0)" class="margin" color="primary">Admin</mat-checkbox>
@@ -57,7 +57,7 @@
             <mat-icon matSuffix>lock</mat-icon>
         </mat-form-field>
 
-        <button (click)="update()" [disabled]="!validaCampos()" class="fullWidth mat-elevation-z4" mat-raised-button color="primary">Atualizar</button>
+        <button (click)="update()" [disabled]="!validaCampos()" class="fullWidth mat-elevation-z4" mat-raised-button color="primary">Alterar</button>
         <button routerLink="../../" class="fullWidth mat-elevation-z4" mat-raised-button color="warn">Cancelar</button>
     </form>
 </div>

@@ -3,9 +3,9 @@
 
         <h1>HelpDesk - Seu Sistema de Chamados</h1>
 
-        <img src="assets/img/login-image.svg" alt="Imagem de Login">
+        <img src="assets/img/login-image.svg" alt="Imagem login">
 
-        <mat-form-field class="full-width" appearance="fill">
+        <mat-form-field class="full-width" appearance="outline">
           <mat-label>E-mail</mat-label>
           <input 
           [formControl] = "email"
@@ -14,9 +14,10 @@
           name="email" 
           matInput 
           placeholder="Ex: fulano@email.com">
+          <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
 
-        <mat-form-field class="full-width" appearance="fill">
+        <mat-form-field class="full-width" appearance="outline">
             <mat-label>Senha</mat-label>
             <input
             [formControl] = "senha"
@@ -26,6 +27,7 @@
             type="password" 
             matInput 
             placeholder="Ex: 123">
+            <mat-icon matSuffix>lock</mat-icon>
         </mat-form-field>
 
         <button (click)="logar()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-raised-button color="primary">Login</button>

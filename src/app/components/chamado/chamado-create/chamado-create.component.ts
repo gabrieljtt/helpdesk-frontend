@@ -52,7 +52,7 @@ export class ChamadoCreateComponent implements OnInit {
 
   create(): void {
     this.chamadoService.create(this.chamado).subscribe(resposta => {
-      this.toastService.success('Chamado criado com sucesso', 'Criado');
+      this.toastService.success('Chamado cadastrado com sucesso!', 'Cadastro');
       this.router.navigate(['chamados']);
     }, ex => {
       this.toastService.error(ex.error.error);

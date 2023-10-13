@@ -42,7 +42,7 @@ export class ClienteDeleteComponent implements OnInit {
 
   delete(): void {
     this.service.delete(this.cliente.id).subscribe(() => {
-      this.toast.success('Cliente deletado com sucesso', 'Delete');
+      this.toast.success('Cliente excluído com sucesso!', 'Exclusão');
       this.router.navigate(['clientes']);
     }, ex => {
       console.log(ex);
