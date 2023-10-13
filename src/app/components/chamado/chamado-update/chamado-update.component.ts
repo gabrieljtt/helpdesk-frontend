@@ -77,7 +77,6 @@ export class ChamadoUpdateComponent implements OnInit {
   findById(): void {
     this.chamadoService.findById(this.chamado.id).subscribe(resposta => {
       this.chamado = resposta;
-      this
     }, ex => {
       this.toastService.error(ex.error.error);
     })
