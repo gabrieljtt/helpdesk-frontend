@@ -42,6 +42,7 @@ export class ChamadoReadComponent implements OnInit {
       this.chamado = resposta;
       this.statusString = this.returnStatus(this.chamado.status);
       this.prioridadeString = this.returnPrioridade(this.chamado.prioridade);
+      this.dataFechamento = this.returnDataFechamento(this.chamado.dataFechamento);
     }, ex => {
       this.toastService.error(ex.error.error);
     })
