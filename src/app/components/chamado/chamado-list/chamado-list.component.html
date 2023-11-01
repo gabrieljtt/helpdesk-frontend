@@ -44,6 +44,11 @@
                 <td mat-cell *matCellDef="let element"> {{element.dataAbertura}} </td>
             </ng-container>
 
+            <ng-container matColumnDef="dataFechamento">
+                <th mat-header-cell *matHeaderCellDef> Data de Fechamento </th>
+                <td mat-cell *matCellDef="let element"> {{returnDataFechamento(element.dataFechamento)}} </td>
+            </ng-container>
+
             <ng-container matColumnDef="prioridade">
                 <th mat-header-cell *matHeaderCellDef> Prioridade </th>
                 <td mat-cell *matCellDef="let element"> {{returnPrioridade(element.prioridade)}} </td>

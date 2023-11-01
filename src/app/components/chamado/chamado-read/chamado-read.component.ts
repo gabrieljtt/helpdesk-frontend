@@ -24,6 +24,7 @@ export class ChamadoReadComponent implements OnInit {
 
   statusString: String
   prioridadeString: String
+  dataFechamento: any
 
   constructor(
     private chamadoService: ChamadoService,
@@ -41,6 +42,7 @@ export class ChamadoReadComponent implements OnInit {
       this.chamado = resposta;
       this.statusString = this.returnStatus(this.chamado.status);
       this.prioridadeString = this.returnPrioridade(this.chamado.prioridade);
+      this.dataFechamento = this.returnDataFechamento(this.dataFechamento);
     }, ex => {
       this.toastService.error(ex.error.error);
     })
@@ -64,5 +66,12 @@ export class ChamadoReadComponent implements OnInit {
     } else {
       return 'ALTA'
     }
+  }
+
+  returnDataFechamento(data: any): any {
+    if(data == null) {
+      return '-----'
+    }
+    return data
   }
 }
