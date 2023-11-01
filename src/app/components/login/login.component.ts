@@ -41,4 +41,8 @@ export class LoginComponent implements OnInit {
     return this.email.valid && this.senha.valid
   }
 
+  returnCreds(): Credenciais {
+    return this.creds
+  }
+
 }

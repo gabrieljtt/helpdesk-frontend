@@ -33,6 +33,26 @@
         </mat-form-field>
     </div>
 
+    <div class="status-prioridade">
+        <mat-form-field appearance="outline">
+            <mat-label>Data Abertura</mat-label>
+            <input
+            [disabled]="true"
+            [(ngModel)]="chamado.dataAbertura"
+            name="abertura"
+            matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Data fechamento</mat-label>
+            <input
+            [disabled]="true"
+            [(ngModel)]="chamado.dataFechamento"
+            name="fechamento"
+            matInput>
+        </mat-form-field>
+    </div>
+
     <div class="tecnico">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Técnico</mat-label>
